@@ -4,6 +4,9 @@
   "description": "Web based version of Naughts and Crosses (or Tic-Tac-Toe).",
   "source": "src/index.html",
   "scripts": {
+    "build": "parcel build",
+    "deploy": "firebase deploy",
+    "predeploy": "npm run build",
     "start": "parcel",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -22,6 +25,7 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "firebase-tools": "^9.23.0",
     "parcel": "^2.0.1"
   }
 }
