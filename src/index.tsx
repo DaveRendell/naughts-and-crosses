@@ -1,9 +1,20 @@
 import * as React from "react"
 import * as ReactDOM from "react-dom"
+import firebase from "firebase/compat/app"
+import 'firebase/compat/auth';
+import firebaseConfig from "../firebase-config.json"
+import Authentication from "./authentication";
 
-const HelloWorld = () => <h1>Hello, World</h1>
+firebase.initializeApp(firebaseConfig)
+
+const App = () => (
+  <div>
+    <h1>Naughts and Crosses</h1>
+    <Authentication />
+  </div>
+)
 
 ReactDOM.render(
-  <HelloWorld />,
+  <App />,
   document.getElementById("root"),
 )
